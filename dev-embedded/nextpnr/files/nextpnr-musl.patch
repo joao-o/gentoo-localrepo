@@ -1,0 +1,22 @@
+diff --git a/gui/application.cc b/gui/application.cc
+index d326068..77c9fa7 100644
+--- a/gui/application.cc
++++ b/gui/application.cc
+@@ -27,7 +27,7 @@
+ #include <exception>
+ #include "log.h"
+ 
+-#ifdef __linux__
++#ifdef __GLIBC__
+ #include <execinfo.h>
+ #endif
+ 
+@@ -44,7 +44,7 @@ BOOL WINAPI WinHandler(DWORD dwCtrlType)
+ #endif
+ 
+ namespace {
+-#ifdef __linux__
++#ifdef __GLIBC__
+ std::string get_backtrace_str()
+ {
+     static const size_t MAX_BT_SIZE = 1024;

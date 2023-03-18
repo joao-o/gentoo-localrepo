@@ -1,0 +1,13 @@
+diff --git a/usb1/libusb1.py b/usb1/libusb1.py
+index f56a9a7..73e0559 100644
+--- a/usb1/libusb1.py
++++ b/usb1/libusb1.py
+@@ -164,7 +164,7 @@ def _loadLibrary():
+         suffix = '.dll'
+     else:
+         dll_loader = ctypes.CDLL
+-        suffix = system == 'Darwin' and '.dylib' or '.so'
++        suffix = system == 'Darwin' and '.dylib' or '.so.0'
+     loader_kw = {}
+     if sys.version_info[:2] >= (2, 6):
+         loader_kw['use_errno'] = True

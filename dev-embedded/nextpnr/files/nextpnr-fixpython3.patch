@@ -1,0 +1,49 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 78c1caa..390f640 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -173,10 +173,10 @@ if (BUILD_GUI)
+     set(CMAKE_ENABLE_EXPORTS ON)
+ endif()
+ 
+-find_package(PythonInterp 3.5 REQUIRED)
++find_package(Python3 COMPONENTS Interpreter REQUIRED)
+ if (BUILD_PYTHON)
+     # TODO: sensible minimum Python version
+-    find_package(PythonLibs 3.5 REQUIRED)
++    find_package(Python3 COMPONENTS Development REQUIRED)
+ else()
+     add_definitions("-DNO_PYTHON")
+ endif()
+@@ -216,7 +216,8 @@ configure_file(
+     ${CMAKE_CURRENT_SOURCE_DIR}/common/version.h.in ${CMAKE_CURRENT_BINARY_DIR}/generated/version.h
+ )
+ 
+-include_directories(common/ json/ frontend/ 3rdparty/json11/ 3rdparty/pybind11/include ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
++include_directories(common/ json/ frontend/ 3rdparty/json11/
++	3rdparty/pybind11/include ${Boost_INCLUDE_DIRS} ${Python3_INCLUDE_DIRS})
+ 
+ if(BUILD_HEAP)
+     find_package (Eigen3 REQUIRED NO_MODULE)
+@@ -331,7 +331,7 @@ foreach (family ${ARCH})
+             target_link_libraries(${target} LINK_PUBLIC gui_${family} ${GUI_LIBRARY_FILES_${ufamily}})
+         endif()
+         if (BUILD_PYTHON)
+-            target_link_libraries(${target} LINK_PUBLIC ${PYTHON_LIBRARIES})
++            target_link_libraries(${target} LINK_PUBLIC ${Python3_LIBRARIES})
+             if (STATIC_BUILD)
+                 target_link_libraries(${target} LINK_PUBLIC ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS} ${ZLIB_LIBRARIES} ${EXPAT_LIBRARIES})
+                 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+diff --git a/ice40/CMakeLists.txt b/ice40/CMakeLists.txt
+index 7a878bf..d5de902 100644
+--- a/ice40/CMakeLists.txt
++++ b/ice40/CMakeLists.txt
+@@ -9,7 +9,7 @@ message(STATUS "Enabled iCE40 devices: ${ICE40_DEVICES}")
+ if(DEFINED ICE40_CHIPDB)
+     add_custom_target(chipdb-ice40-bbas ALL)
+ else()
+-    find_package(PythonInterp 3.5 REQUIRED)
++	find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+ 
+     # shared among all families
+     set(SERIALIZE_CHIPDBS TRUE CACHE BOOL

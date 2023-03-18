@@ -1,0 +1,22 @@
+diff --git a/Makefile.common b/Makefile.common
+index 60df96a..9058fed 100644
+--- a/Makefile.common
++++ b/Makefile.common
+@@ -125,17 +125,6 @@ ifneq ("$(wildcard /usr/lib/librt.so /usr/lib64/librt.so)","")
+ LDFLAGS            += -lrt
+ endif
+ 
+-ifeq (${shell uname}, Linux)
+-ifeq ($(RELEASE),1)
+-# allow the shared library to be found in the build directory
+-# only for linking, the install time location is used at runtime
+-LFLAGS		+= -Wl,-rpath-link,${LIBDIR} -Wl,-rpath,${PREFIX}/lib
+-else
+-# allow the shared library to be found in the build directory
+-LFLAGS		+= -Wl,-rpath,${LIBDIR}
+-endif
+-endif
+-
+ ifeq (${V}, 1)
+ E		=
+ else

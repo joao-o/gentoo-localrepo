@@ -1,0 +1,10 @@
+diff --git a/Makefile b/Makefile
+index a9f7023..378a181 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,4 +1,4 @@
+-prefix=/usr/local
++prefix=/usr/
+ includedir=$(prefix)/include
+ libdir=$(prefix)/lib
+ pkgconfigdir=$(libdir)/pkgconfig

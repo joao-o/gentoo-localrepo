@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
+DEFINED_PHASES=prepare unpack
+DEPEND=media-libs/libharu dev-util/gengetopt
+DESCRIPTION=hyp2mat is a utility which converts HyperLynx and QucsStudio pcb files to matlab for electromagnetic simulation, or to PDF for printing.
+EAPI=7
+HOMEPAGE=https://github.com/koendv/hyp2mat
+INHERIT=eutils git-r3 multilib autotools
+KEYWORDS=~amd64
+LICENSE=GPL-3
+PROPERTIES=live
+SLOT=0
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	git-r3	2347f8fe2d392b2a091191f94be37e6f	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	autotools	6dcd6b6a486e79928e1243ff9ba41fcc
+_md5_=fa84d12d9fd1342fccbf27e967aa12f6

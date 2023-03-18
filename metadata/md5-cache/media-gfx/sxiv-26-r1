@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst postrm prepare unpack
+DEPEND=exif? ( media-libs/libexif ) gif? ( media-libs/giflib:0= ) media-libs/imlib2[X,gif?,jpeg?,png?] media-libs/libwebp x11-libs/libX11 x11-libs/libXft
+DESCRIPTION=Simple (or small or suckless) X Image Viewer
+EAPI=7
+HOMEPAGE=https://github.com/muennich/sxiv/
+INHERIT=desktop xdg-utils savedconfig toolchain-funcs git-r3
+IUSE=exif gif +jpeg +png savedconfig
+KEYWORDS=amd64
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=exif? ( media-libs/libexif ) gif? ( media-libs/giflib:0= ) media-libs/imlib2[X,gif?,jpeg?,png?] media-libs/libwebp x11-libs/libX11 x11-libs/libXft
+SLOT=0
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	xdg-utils	ac0e315a3688929e34ac75b139e7349a	portability	58227860123d3e8da23290064ce3373e	savedconfig	4011d8d7370446e970e2c92b20a31341	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=6c4aae1e60a6159265a6e212a4494bcb

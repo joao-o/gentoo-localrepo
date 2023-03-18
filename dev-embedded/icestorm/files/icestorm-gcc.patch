@@ -1,0 +1,13 @@
+diff --git a/config.mk b/config.mk
+index c7f80a3..0b5eb38 100644
+--- a/config.mk
++++ b/config.mk
+@@ -3,8 +3,6 @@ DEBUG ?= 0
+ ICEPROG ?= 1
+ PROGRAM_PREFIX ?=
+
+-CXX ?= clang++
+-CC ?= clang
+ PKG_CONFIG ?= pkg-config
+
+ C_STD ?= c99

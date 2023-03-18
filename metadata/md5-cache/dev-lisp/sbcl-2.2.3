@@ -1,0 +1,14 @@
+BDEPEND=>=dev-lisp/asdf-3.3:= doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp
+EAPI=8
+HOMEPAGE=http://sbcl.sourceforge.net/
+INHERIT=multilib flag-o-matic pax-utils toolchain-funcs
+IUSE=debug doc source +threads +unicode zlib ecl_bootstrap
+KEYWORDS=-* ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-solaris
+LICENSE=MIT
+RDEPEND=>=dev-lisp/asdf-3.3:= !prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.6 ) )
+SLOT=0/2.2.3
+SRC_URI=mirror://sourceforge/sbcl/sbcl-2.2.3-source.tar.bz2
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	flag-o-matic	69394e25812406faa1f90edaf4969395	pax-utils	91d47e5d20627c717aa878b9167c62a8
+_md5_=29c4dc2c176f5ba1750a53eab235cbc1

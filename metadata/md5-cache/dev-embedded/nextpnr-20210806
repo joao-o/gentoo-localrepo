@@ -1,0 +1,14 @@
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=ice40? ( dev-embedded/icestorm >=dev-embedded/yosys-0.8 ) ecp5? ( dev-embedded/prjtrellis >dev-embedded/yosys-0.8 ) dev-qt/qtcore:5 dev-libs/boost dev-cpp/eigen
+DESCRIPTION=portable FPGA place and route tool
+EAPI=7
+HOMEPAGE=https://github.com/YosysHQ/nextpnr
+INHERIT=cmake
+IUSE=ice40 ecp5
+KEYWORDS=amd64
+LICENSE=ISC
+SLOT=0
+SRC_URI=https://github.com/YosysHQ/nextpnr/archive/6fc41692d689beda2f142ab039d7fa8d2517bebe.tar.gz -> nextpnr-20210806.tar.gz
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	flag-o-matic	69394e25812406faa1f90edaf4969395	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	xdg-utils	ac0e315a3688929e34ac75b139e7349a	cmake	449b4785acace35308fe747fc939bde1
+_md5_=00bcde0120c59a5afcf2ea6ac619d773

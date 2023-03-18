@@ -1,0 +1,15 @@
+BDEPEND=sys-devel/bison sys-devel/flex virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare
+DEPEND=dev-cpp/eigen:3 dev-libs/boost:= dev-libs/double-conversion:= dev-libs/glib:2 dev-libs/gmp:0= dev-libs/libspnav dev-libs/libzip:= dev-libs/mpfr:0= dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5[-gles2-only] dev-qt/qtmultimedia:5 dev-qt/qtnetwork:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 media-gfx/opencsg media-libs/fontconfig media-libs/freetype >=media-libs/glew-2.0.0:0= media-libs/harfbuzz:= sci-mathematics/cgal:= >=x11-libs/qscintilla-2.10.3:= emacs? ( >=app-editors/emacs-23.1:* ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=The Programmers Solid 3D CAD Modeller
+EAPI=7
+HOMEPAGE=https://www.openscad.org/
+INHERIT=elisp-common qmake-utils xdg
+IUSE=emacs
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=dev-cpp/eigen:3 dev-libs/boost:= dev-libs/double-conversion:= dev-libs/glib:2 dev-libs/gmp:0= dev-libs/libspnav dev-libs/libzip:= dev-libs/mpfr:0= dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5[-gles2-only] dev-qt/qtmultimedia:5 dev-qt/qtnetwork:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 media-gfx/opencsg media-libs/fontconfig media-libs/freetype >=media-libs/glew-2.0.0:0= media-libs/harfbuzz:= sci-mathematics/cgal:= >=x11-libs/qscintilla-2.10.3:= emacs? ( >=app-editors/emacs-23.1:* )
+SLOT=0
+SRC_URI=https://github.com/openscad/openscad/releases/download/openscad-2019.05/openscad-2019.05.src.tar.gz -> openscad-2019.05.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	qmake-utils	59420c906278d16deaaa629f9d115707	xdg-utils	ac0e315a3688929e34ac75b139e7349a	xdg	6024fbc93167fad782e2032933654857
+_md5_=b267eb4e61ceb1985e9e303be08ea1b7

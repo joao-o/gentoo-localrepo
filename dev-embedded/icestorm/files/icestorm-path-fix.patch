@@ -1,0 +1,24 @@
+diff --git a/config.mk b/config.mk
+index b6c0f6a..c52f172 100644
+--- a/config.mk
++++ b/config.mk
+@@ -1,4 +1,4 @@
+-PREFIX ?= /usr/local
++PREFIX ?= /usr
+ DEBUG ?= 0
+ ICEPROG ?= 1
+ PROGRAM_PREFIX ?=
+diff --git a/icebox/icebox_vlog.py b/icebox/icebox_vlog.py
+index a956e8f..6616220 100755
+--- a/icebox/icebox_vlog.py
++++ b/icebox/icebox_vlog.py
+@@ -384,7 +384,7 @@ def seg_to_net(seg, default=None):
+ 
+ if lookup_symbols:
+     text_func.append("// Debug Symbols")
+-    with open("/usr/local/share/icebox/chipdb-%s.txt" % ic.device, "r") as f:
++    with open("/usr/share/icebox/chipdb-%s.txt" % ic.device, "r") as f:
+         current_net = -1
+         exported_names = dict()
+         for line in f:
+ 
